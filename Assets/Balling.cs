@@ -22,12 +22,12 @@ public class Balling : MonoBehaviour
     }
 
 
-void Update()
+    void FixedUpdate()
     {
-        if (Input.GetButton("Fire1") && ballthrown==true)
-            {
-              MoveBall();
-            }
+        if (Input.GetButton("Fire1") && ballthrown == true)
+        {
+            MoveBall();
+        }
     }
 }
 
