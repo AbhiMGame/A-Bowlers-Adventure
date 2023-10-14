@@ -5,7 +5,7 @@ using UnityEngine;
 public class Balling : MonoBehaviour
 {
 
-    [SerializeField] private GameObject ball;
+    public GameObject ball;
     [SerializeField] private float launchballVelocity;
     private bool ballthrown;
     // Start is called before the first frame update
@@ -28,6 +28,16 @@ public class Balling : MonoBehaviour
         {
             MoveBall();
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Destroy(this.gameObject, 0.2f);
+            Debug.Log("Light is destroying");
+        }
+
     }
 }
 
