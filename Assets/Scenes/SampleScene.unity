@@ -551,7 +551,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0
   m_Color: {r: 1, g: 0, b: 0, a: 1}
-  m_Intensity: 102.14
+  m_Intensity: 104.26
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -570,8 +570,8 @@ MonoBehaviour:
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 28.079998
-  m_PointLightOuterAngle: 49.37
+  m_PointLightInnerAngle: 25.900293
+  m_PointLightOuterAngle: 47.1903
   m_PointLightInnerRadius: 9.054616
   m_PointLightOuterRadius: 9.479096
   m_ShapeLightParametricSides: 5
@@ -928,6 +928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1568176567}
   - component: {fileID: 1568176566}
+  - component: {fileID: 1568176568}
   m_Layer: 0
   m_Name: Triangle
   m_TagString: Untagged
@@ -1004,6 +1005,19 @@ Transform:
   - {fileID: 791850465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1568176568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568176565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce76cd804b6e2a649a1fc317510c383a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightEnemy: {fileID: 791850464}
 --- !u!1 &1872598067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1222,7 @@ GameObject:
   - component: {fileID: 2128165894}
   - component: {fileID: 2128165893}
   - component: {fileID: 2128165892}
+  - component: {fileID: 2128165896}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -1344,6 +1359,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2128165896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128165891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4806c0a4d4d0d09468e7f5dad2590330, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 2128165891}
+  launchballVelocity: 370
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
