@@ -34,11 +34,20 @@ public class Balling : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.DeathClip);
             Destroy(this.gameObject, 0.2f);
             Debug.Log("Light is destroying");
         }
-
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+         if (collision.gameObject.tag == "Stumps")
+        {
+            AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.WinSound);
+        }
+    }
+
 }
 
 

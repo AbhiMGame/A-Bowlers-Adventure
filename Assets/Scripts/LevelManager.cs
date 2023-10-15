@@ -11,36 +11,35 @@ public class LevelManager : MonoBehaviour
     
     public void LoadGame()
     {
+        AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.ButtonClick);
         SceneManager.LoadScene(1);
         mainMenu.SetActive(false);
-
-    }
-
-    public void PlaySound()
-    {
-        AudioManager.Instance.buttonClick.Play();
+       
     }
 
     public void PauseGame()
     {
-        AudioManager.Instance.buttonClick.Play();
+        AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.ButtonClick);
         Time.timeScale = 0;
         pauseMenu.SetActive(true);
-        
+        AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.ButtonClick);
+
     }
 
     public void ResumeGame()
     {
-        
+        AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.ButtonClick);
         Time.timeScale = 1;
         pauseMenu.SetActive(false);
+        
     }
 
     public void RestartGame()
     {
-        
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.ButtonClick);
         Time.timeScale = 1;
+        
     }
 
     public void QuitGame()
@@ -48,5 +47,6 @@ public class LevelManager : MonoBehaviour
         
         Application.Quit();
         Debug.Log("Player has Quit The Game");
+        AudioManager._instance.AudioPlayer.PlayOneShot(AudioManager._instance.ButtonClick);
     }
 }

@@ -5,8 +5,13 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager _instance;
+    public AudioSource AudioPlayer;
     [field: SerializeField]
-    public AudioSource buttonClick { get; private set; }
+    public AudioClip DeathClip { get; private set; }
+    [field: SerializeField]
+    public AudioClip ButtonClick { get; private set; }
+    [field: SerializeField]
+    public AudioClip WinSound { get; private set; }
     public static AudioManager Instance
     { 
         get
