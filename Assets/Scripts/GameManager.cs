@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager _instance;
     private AudioManager audioManager;
+    private LevelManager levelManager;
     public static GameManager Instance
     {
         get
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
         {
             _instance = this;
             audioManager = AudioManager.Instance;
+            levelManager = LevelManager.Instance;
         }
     }
 
